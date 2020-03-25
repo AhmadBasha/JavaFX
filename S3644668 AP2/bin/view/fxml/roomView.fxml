@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RoomViewController">
+   <children>
+      <HBox alignment="CENTER" layoutX="10.0" prefHeight="160.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane fx:id="imagePane" layoutX="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" style="-fx-border-color: black;" />
+            <GridPane alignment="CENTER" layoutX="164.0" minWidth="-Infinity" prefHeight="150.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" percentWidth="20.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="30.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" percentWidth="20.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Room ID:" />
+                  <Label text="Num Rooms:" GridPane.rowIndex="1" />
+                  <Label text="Feature Summary:" GridPane.rowIndex="2" />
+                  <Label text="Status:" GridPane.rowIndex="3" />
+                  <Label fx:id="roomId" GridPane.columnIndex="1" />
+                  <Label fx:id="numRooms" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="summary" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="status" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="rate" alignment="CENTER" style="-fx-border-color: red;" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding></Label>
+                  <Button onAction="#handleDetails" text="Details" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" />
+                  <Button onAction="#handleRent" text="Rent" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button onAction="#handlePerformM" text="PerformMaintainance" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button onAction="#handleCompleteM" text="CompleteMaintainance" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button alignment="CENTER" onAction="#handleReturn" text="Return" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>
